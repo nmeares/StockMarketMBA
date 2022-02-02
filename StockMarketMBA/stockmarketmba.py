@@ -19,12 +19,13 @@ class api():
         self.exch_symbols_url = urls['EXCHANGE_SYMBOLS']
         self.spacs_url = urls['PENDING_SPACS']
 
-    def symbol_lookup(self, ticker):
-        '''Function for looking up 
+    def symbol_lookup(self, ticker:str) -> dict:
+        '''Look up the security identifiers for a specified ticker.
+        
 
         Parameters
         ----------
-        ticker : [type]
+        ticker : str
             [description]
 
         Returns
@@ -34,7 +35,7 @@ class api():
         '''
         url = self.symbols_url
         # Retrieve version ID from web form
-        forms = lib.get_forms(url, s)[1]
+        forms = lib.get_forms(url, self.s)[1]
         details = lib.form_details(forms)
         version = lib.get_version(details)
 
@@ -45,7 +46,7 @@ class api():
         r = self.s.post(url, headers=self.HEADERS, data=payload)
         return lib.get_table(r.text, 'searchtable')
 
-    def exch_secs(self, exchange_code):
+    def exch_secs(self, exchange_code:str) -> dict:
         url = self.on_exch_url
         payload = 'action=Go&exchangecode={}'.format(exchange_code)
 
@@ -53,13 +54,13 @@ class api():
         r = self.s.post(url, headers=self.HEADERS, data=payload)
         return lib.get_table(r.text, 'ETFs')
 
-    def exch_symbols(self):
+    def exch_symbols(self) -> dict:
         url = self.exch_symbols_url
 
         r = self.s.get(url)
         return lib.get_table(r.text, 'ETFs')
 
-    def pending_SPACs(self):
+    def pending_SPACs(self) -> dict:
         url = self.spacs_url
 
         r = self.s.get(url)
