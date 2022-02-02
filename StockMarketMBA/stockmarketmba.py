@@ -7,7 +7,6 @@ HEADERS_PATH = './headers.json'
 class api():
     
     def __init__(self):
-        
         # Initiate
         self.s = session()
         with open(HEADERS_PATH) as f:
