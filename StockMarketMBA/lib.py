@@ -43,6 +43,3 @@ def get_table(html, table_id):
     page = bs(html, 'lxml')
     table_html = page.find('table', id=table_id)
     return parse_table(table_html)
-
-
-
