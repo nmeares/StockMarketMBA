@@ -22,5 +22,5 @@ tqdm = "*"
 python_version = "3.9"
 
 [scripts]
-build = "rm -rf dist build && python3 setup.py sdist bdist_wheel"
+build = "rm -rf dist build; python3 setup.py sdist bdist_wheel"
 deploy = "twine upload dist/*"
