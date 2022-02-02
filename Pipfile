@@ -20,3 +20,7 @@ tqdm = "*"
 
 [requires]
 python_version = "3.9"
+
+[scripts]
+build = "python3 setup.py sdist bdist_wheel"
+deploy = "twine upload dist/*"
