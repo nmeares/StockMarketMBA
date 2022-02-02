@@ -1,9 +1,5 @@
+from ..StockMarketMBA import stockmarketmba
 
-import os
-import sys
-
-from StockMarketMBA import stockmarketmba as mba
-
-api = mba.api()
+api = stockmarketmba.api()
 
 print(api.exch_symbols())
