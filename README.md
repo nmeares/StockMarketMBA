@@ -6,10 +6,10 @@ API queries currently return a JSON object, however future development will allo
 
 ## Current Endpoints
 
-* Symbol lookup - returns stock identifiers
-* Stocks on Exchange - returns list of stocks on a particular exchange
-* Global Exchange Symbols - returns a list of exchange symbols for use with other endpoints
-* Pending SPACS - returns a list of pending SPACs
+* **Symbol lookup** - *returns stock identifiers*
+* **Stocks on Exchange** - *returns list of stocks on a particular exchange*
+* **Global Exchange Symbols** - *returns a list of exchange symbols for use with other endpoints*
+* **Pending SPACS** - *returns a list of pending SPACs*
 
 ## Future Development
 
