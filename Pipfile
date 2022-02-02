@@ -22,5 +22,5 @@ tqdm = "*"
 python_version = "3.9"
 
 [scripts]
-build = "bash -c \"pipenv lock -r > requirements.txt && rm -rf dist build *.egg-info && python3 setup.py sdist bdist_wheel\""
+build = "bash -c \"pipenv lock --requirements && rm -rf dist build *.egg-info && python3 setup.py sdist bdist_wheel\""
 deploy = "twine upload dist/*"
