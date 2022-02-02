@@ -11,6 +11,12 @@ API queries currently return a JSON object, however future development will allo
 * **Global Exchange Symbols** - *returns a list of exchange symbols for use with other endpoints*
 * **Pending SPACS** - *returns a list of pending SPACs*
 
+## Install
+
+```shell
+    pip install stockmarketmba
+```
+
 ## Future Development
 
 - [ ] Add more endpoints
