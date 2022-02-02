@@ -19,9 +19,9 @@ class api():
         self.exch_symbols_url = urls['EXCHANGE_SYMBOLS']
         self.spacs_url = urls['PENDING_SPACS']
 
-    def symbol_lookup(self, ticker:str) -> dict:
+    def symbol_lookup(self, ticker: str) -> dict:
         '''Look up the security identifiers for a specified ticker.
-    
+
         Parameters
         ----------
         ticker : str
@@ -45,7 +45,7 @@ class api():
         r = self.s.post(url, headers=self.HEADERS, data=payload)
         return lib.get_table(r.text, 'searchtable')
 
-    def exch_secs(self, exchange_code:str) -> dict:
+    def exch_secs(self, exchange_code: str) -> dict:
         '''Lookup all stocks listed on a sepcified exchange.
 
         Parameters
