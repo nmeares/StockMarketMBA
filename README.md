@@ -2,5 +2,8 @@
 
 A simple library for accessing data from [stockmarketmba.com](https://stockmarketmba.com).
 
-## Usage
 
+## Future Development
+
+- [ ] Add more endpoints
+- [ ] Add more output options (pandas, csv, etc.)
