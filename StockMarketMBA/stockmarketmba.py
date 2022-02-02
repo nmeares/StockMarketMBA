@@ -47,6 +47,18 @@ class api():
         return lib.get_table(r.text, 'searchtable')
 
     def exch_secs(self, exchange_code:str) -> dict:
+        '''Lookup all stocks listed on a sepcified exchange.
+
+        Parameters
+        ----------
+        exchange_code : str
+            [description]
+
+        Returns
+        -------
+        dict
+            [description]
+        '''
         url = self.on_exch_url
         payload = 'action=Go&exchangecode={}'.format(exchange_code)
 
