@@ -2,6 +2,7 @@ import StockMarketMBA.lib as lib
 from requests.sessions import session
 import json
 
+HEADERS_PATH = './headers.json'
 
 class api():
     
@@ -9,7 +10,7 @@ class api():
         
         # Initiate
         self.s = session()
-        with open('headers.json') as f:
+        with open(HEADERS_PATH) as f:
             self.HEADERS = json.load(f)
 
 
