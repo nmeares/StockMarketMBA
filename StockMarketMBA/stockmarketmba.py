@@ -79,12 +79,12 @@ class api():
         return lib.get_table(r.text, 'ETFs')
 
     def pending_SPACs(self) -> dict:
-        '''[summary]
+        '''Retrieve list of all pending PSAC mergers
 
         Returns
         -------
         dict
-            [description]
+            returns a JSON response object containing all pending SPAC mergers
         '''
         url = self.spacs_url
 
