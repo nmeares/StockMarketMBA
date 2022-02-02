@@ -3,9 +3,9 @@ from requests.sessions import session
 from configparser import ConfigParser
 import json
 
-HEADERS_PATH = './headers.json'
+HEADERS_PATH = 'StockMarketMBA/headers.json'
 parser= ConfigParser()
-parser.read('config.ini')
+parser.read('StockMarketMBA/config.ini')
 urls = parser['URLs']
 
 
