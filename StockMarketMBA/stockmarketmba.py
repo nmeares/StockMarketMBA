@@ -26,12 +26,12 @@ class api():
         Parameters
         ----------
         ticker : str
-            [description]
+            ticker symbol
 
         Returns
         -------
-        [type]
-            [description]
+        dict
+            returns a JSON response object
         '''
         url = self.symbols_url
         # Retrieve version ID from web form
