@@ -66,12 +66,26 @@ class api():
         return lib.get_table(r.text, 'ETFs')
 
     def exch_symbols(self) -> dict:
+        '''Retrieve list of all ISO exchange symbols
+
+        Returns
+        -------
+        dict
+            returns a JSON response object containing all exchange codes and names
+        '''
         url = self.exch_symbols_url
 
         r = self.s.get(url)
         return lib.get_table(r.text, 'ETFs')
 
     def pending_SPACs(self) -> dict:
+        '''[summary]
+
+        Returns
+        -------
+        dict
+            [description]
+        '''
         url = self.spacs_url
 
         r = self.s.get(url)
