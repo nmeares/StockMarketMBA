@@ -1,8 +1,10 @@
 import StockMarketMBA.lib as lib
 from requests.sessions import session
+import configparser
 import json
 
 HEADERS_PATH = './headers.json'
+urls = configparser.ConfigParser()['URLS']
 
 class api():
     
@@ -11,10 +13,14 @@ class api():
         self.s = session()
         with open(HEADERS_PATH) as f:
             self.HEADERS = json.load(f)
+        self.symbols_url = urls['SYMBOL_LOOKUP']
+        self.on_exch_url = urls['SECS_ON_EXCHANGE']
+        self.exch_symbols_url = urls['EXCHANGE_SYMBOLS']
+        self.spacs_url = urls['PENDING_SPACS']
 
 
     def symbol_lookup(self, ticker):
-        url = "https://stockmarketmba.com/symbollookup.php"
+        url = self.symbols_url
         # Retrieve version ID from web form
         forms = lib.get_forms(url, s)[1]
         details = lib.form_details(forms)
@@ -29,7 +35,7 @@ class api():
 
 
     def exch_secs(self,exchange_code):
-        url = "https://stockmarketmba.com/listofstocksforanexchange.php"
+        url = self.on_exch_url
         payload = 'action=Go&exchangecode={}'.format(exchange_code)
 
         # Request and find table
@@ -38,14 +44,14 @@ class api():
 
 
     def exch_symbols(self):
-        url = 'https://stockmarketmba.com/globalstockexchanges.php'
+        url = self.exch_symbols_url
 
         r = self.s.get(url)
         return lib.get_table(r.text, 'ETFs')
 
 
     def pending_SPACs(self):
-        url = 'https://stockmarketmba.com/pendingspacmergers.php'
+        url = self.spacs_url
 
         r = self.s.get(url)
         return lib.get_table(r.text, 'ETFs')
