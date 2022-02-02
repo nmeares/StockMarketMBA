@@ -1,6 +1,5 @@
 import StockMarketMBA.lib as lib
 from requests.sessions import session
-from pprint import pprint
 import json
 
 # Initiate
