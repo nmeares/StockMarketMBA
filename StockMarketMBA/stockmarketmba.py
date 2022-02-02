@@ -21,8 +21,7 @@ class api():
 
     def symbol_lookup(self, ticker:str) -> dict:
         '''Look up the security identifiers for a specified ticker.
-        
-
+    
         Parameters
         ----------
         ticker : str
@@ -52,12 +51,12 @@ class api():
         Parameters
         ----------
         exchange_code : str
-            [description]
+            ISO exchange code. Can be found using 'exch_symbols' function
 
         Returns
         -------
         dict
-            [description]
+            returns a JSON response object
         '''
         url = self.on_exch_url
         payload = 'action=Go&exchangecode={}'.format(exchange_code)
