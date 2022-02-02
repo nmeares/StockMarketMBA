@@ -1,7 +1,8 @@
 
 import os
 import sys
-from ..StockMarketMBA import stockmarketmba as mba
+
+from StockMarketMBA import stockmarketmba as mba
 
 api = mba.api()
 
