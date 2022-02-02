@@ -5,8 +5,8 @@ import json
 
 HEADERS_PATH = './headers.json'
 parser= ConfigParser()
-parser.read('URLs.ini')
-urls = parser.get('URLS')
+parser.read('config.ini')
+urls = parser['URLS']
 
 
 class api():
