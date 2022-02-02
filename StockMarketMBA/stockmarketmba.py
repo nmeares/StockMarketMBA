@@ -1,10 +1,10 @@
 import StockMarketMBA.lib as lib
 from requests.sessions import session
-import configparser
+from configparser import ConfigParser
 import json
 
 HEADERS_PATH = './headers.json'
-urls = configparser.ConfigParser()['URLS']
+urls = ConfigParser()['URLS']
 
 
 class api():
@@ -20,6 +20,18 @@ class api():
         self.spacs_url = urls['PENDING_SPACS']
 
     def symbol_lookup(self, ticker):
+        '''Function for looking up 
+
+        Parameters
+        ----------
+        ticker : [type]
+            [description]
+
+        Returns
+        -------
+        [type]
+            [description]
+        '''
         url = self.symbols_url
         # Retrieve version ID from web form
         forms = lib.get_forms(url, s)[1]
