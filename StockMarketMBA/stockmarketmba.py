@@ -6,8 +6,9 @@ import json
 HEADERS_PATH = './headers.json'
 urls = configparser.ConfigParser()['URLS']
 
+
 class api():
-    
+
     def __init__(self):
         # Initiate
         self.s = session()
@@ -17,7 +18,6 @@ class api():
         self.on_exch_url = urls['SECS_ON_EXCHANGE']
         self.exch_symbols_url = urls['EXCHANGE_SYMBOLS']
         self.spacs_url = urls['PENDING_SPACS']
-
 
     def symbol_lookup(self, ticker):
         url = self.symbols_url
@@ -33,8 +33,7 @@ class api():
         r = self.s.post(url, headers=self.HEADERS, data=payload)
         return lib.get_table(r.text, 'searchtable')
 
-
-    def exch_secs(self,exchange_code):
+    def exch_secs(self, exchange_code):
         url = self.on_exch_url
         payload = 'action=Go&exchangecode={}'.format(exchange_code)
 
@@ -42,13 +41,11 @@ class api():
         r = self.s.post(url, headers=self.HEADERS, data=payload)
         return lib.get_table(r.text, 'ETFs')
 
-
     def exch_symbols(self):
         url = self.exch_symbols_url
 
         r = self.s.get(url)
         return lib.get_table(r.text, 'ETFs')
-
 
     def pending_SPACs(self):
         url = self.spacs_url
