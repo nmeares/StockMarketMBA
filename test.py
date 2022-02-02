@@ -1,4 +1,4 @@
-from ..StockMarketMBA import stockmarketmba
+from StockMarketMBA import stockmarketmba
 
 api = stockmarketmba.api()
 
