@@ -19,6 +19,6 @@ setup(
     version="1.0.7",
     long_description=README,
     long_description_content_type="text/markdown",
-    packages=["StockMarketMBA"], 
+    packages=["stockmarketmba"], 
     install_requires = requirements
 )
