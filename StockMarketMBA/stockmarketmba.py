@@ -4,7 +4,7 @@ from configparser import ConfigParser
 import pathlib
 import json
 
-PATH = pathlib.Path(__file__).parent
+PATH = str(pathlib.Path(__file__).parent)
 
 HEADERS_PATH = PATH + '/headers.json'
 parser= ConfigParser()
