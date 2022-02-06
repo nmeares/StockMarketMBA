@@ -20,5 +20,6 @@ setup(
     long_description=README,
     long_description_content_type="text/markdown",
     packages=["stockmarketmba"], 
-    install_requires = requirements
+    install_requires = requirements,
+    include_package_data=True
 )
