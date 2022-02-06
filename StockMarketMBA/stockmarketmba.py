@@ -1,11 +1,11 @@
-import StockMarketMBA.lib as lib
+import stockmarketmba.lib as lib
 from requests.sessions import session
 from configparser import ConfigParser
 import json
 
-HEADERS_PATH = 'StockMarketMBA/headers.json'
+HEADERS_PATH = 'stockmarketmba/headers.json'
 parser= ConfigParser()
-parser.read('StockMarketMBA/config.ini')
+parser.read('stockmarketmba/config.ini')
 urls = parser['URLs']
 
 
