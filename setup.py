@@ -16,9 +16,9 @@ with open('requirements.txt', 'r') as fh:
 # This call to setup() does all the work
 setup(
     name="stockmarketmba",
-    version="1.0.6",
+    version="1.0.7",
     long_description=README,
     long_description_content_type="text/markdown",
-    packages=["stockmarketmba"], 
+    packages=["StockMarketMBA"], 
     install_requires = requirements
 )
