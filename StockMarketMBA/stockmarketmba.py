@@ -1,4 +1,4 @@
-import StockMarketMBA.lib as lib
+import stockmarketmba.lib as lib
 from requests.sessions import session
 from configparser import ConfigParser
 import json
