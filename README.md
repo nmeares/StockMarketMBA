@@ -20,12 +20,12 @@ API queries currently return a JSON object, however future development will allo
 ### Usage
 
 ```python
-import StockMarketMBA as mba
-api = mba.api()
+>>> import StockMarketMBA as mba
+>>> api = mba.api()
 
 # Retrieve stock info
-sec_ids = test.symbol_lookup('aapl')
-print(sec_ids)
+>>> sec_ids = test.symbol_lookup('aapl')
+>>> print(sec_ids)
 
 [{},
  {'Symbol': 'AAPL',
@@ -41,9 +41,9 @@ print(sec_ids)
   'Avg Volume': '103,082,603',
   'Actions': 'Analyze'}]
 
-  # Retrieve exchange security list (e.g. London Stock Exchange)
-exch_secs = test.exch_secs('GB')
-print(exch_secs)
+# Retrieve exchange security list (e.g. London Stock Exchange)
+>>> exch_secs = test.exch_secs('GB')
+>>> print(exch_secs)
 
 [{},
  {'Symbol': 'GB:3RB',
