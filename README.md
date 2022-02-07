@@ -14,7 +14,7 @@ API queries currently return a JSON object, however future development will allo
 ## Install
 
 ```shell
-    pip install stockmarketmba
+pip install stockmarketmba
 ```
 
 ### Usage
