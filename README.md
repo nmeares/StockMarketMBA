@@ -1,4 +1,4 @@
-# Stock Market MBA
+# 📈 Stock Market MBA
 
 A simple library for accessing data from [stockmarketmba.com](https://stockmarketmba.com).
 
