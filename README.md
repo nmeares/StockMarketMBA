@@ -24,7 +24,7 @@ pip install stockmarketmba
 >>> api = mba.api()
 
 # Retrieve stock info
->>> sec_ids = test.symbol_lookup('aapl')
+>>> sec_ids = api.symbol_lookup('aapl')
 >>> print(sec_ids)
 
 [{},
@@ -42,7 +42,7 @@ pip install stockmarketmba
   'Actions': 'Analyze'}]
 
 # Retrieve exchange security list (e.g. London Stock Exchange)
->>> exch_secs = test.exch_secs('GB')
+>>> exch_secs = api.exch_secs('GB')
 >>> print(exch_secs)
 
 [{},
